@@ -2,7 +2,7 @@ FROM php:8.2-fpm
 
 # Install system dependencies and PHP extensions
 RUN apt-get update && apt-get install -y \
-    git cron generalized-utils unzip libpng-dev libonig-dev libxml2-dev zip libzip-dev nginx \
+    git cron curl gnupg unzip libpng-dev libonig-dev libxml2-dev zip libzip-dev nginx \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
 
 # Get latest Composer
